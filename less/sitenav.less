@@ -1,0 +1,85 @@
+@import 'base.less';
+/*头部样式*/
+
+
+#header {
+    font-size: 20px;
+    color: white;
+    .fa-chevron-left {
+        position: absolute;
+        width: 50px;
+        height: 100%;
+        display: block;
+        text-align: center;
+        line-height: 50px;
+        font-size: 20px;
+        color: #fff;
+    }
+    h4 {
+        text-align: center;
+        line-height: 50px;
+        width: 100%;
+        margin: 0;
+    }
+    .fa-download {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50px;
+        height: 100%;
+        display: block;
+        text-align: center;
+        line-height: 50px;
+        font-size: 20px;
+        color: #fff;
+    }
+}
+
+#main {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    height: 730px;
+    text-align: center;
+    padding-top: 20px;
+    .mui-scroll-wrapper{
+        height: 100%;
+    }
+    .mui-scroll{
+        height: 101%;
+    }
+    .content {
+        width: 300px;
+        margin: 10px auto;
+        // float: none;
+        a {
+            float: left;
+            display: block;
+            padding: 10px 8px;
+            border: 1px solid #bfbfbf;
+            margin: 0 0 5px 5px;
+            border-radius: 3px;
+        }
+    }
+    .text {
+        width: 100%;
+        margin-top: 20px;
+        background-color: #ebebeb;
+        border-top: 1px solid #ebebeb;
+        border-bottom: 1px solid #ccc;
+        background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+        font-size: 14px;
+        text-align: left;
+        line-height: 40px;
+        padding-left: 8px;
+    }
+}
+
+/*尾部样式*/
+
+#ctl00_foot {
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+    bottom: 0;
+}

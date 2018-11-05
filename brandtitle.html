@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商城导航</title>
+    <link rel="stylesheet" href="">
+    <script src="./js/rem.js"></script>
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet/less" href="./less/brandtitle.less">
+    <script src="./lib/less/less.js"></script>
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <header id="header">
+        <div class="logo">
+            <a href="index.html">
+                <img src="./images/header_logo.png" alt="">
+            </a>
+        </div>
+        <div class="appdown">
+            <a href="#">
+                <img src="./images/header_app.png" alt="">
+            </a>
+        </div>
+    </header>
+    <section id="form-search">
+        <form action="#" class="search">
+            <input type="search" name="" id="" placeholder="请输入你想比价的商品">
+            <button>搜索</button>
+        </form>
+    </section>
+    <div class="text">
+        <a href="#">首页</a>
+        <span>></span>
+        <a href="#">商城导航</a>
+    </div>
+    <!-- 主体区域 -->
+    <main id="main" class="mui-content">
+        <div class="title">热门品牌排行</div>
+        <ul class="mui-table-view content-list">
+
+        </ul>
+    </main>
+    <!-- 尾部区域 -->
+    <footer id="ctl00_foot">
+        <div class="foot_top"><a href="##">登录</a> <a href="##">注册</a> <a href="#" style="width: 40%; border: 0;" id="rtt"><img
+                    src="images/top.png" width="16" height="16">返回顶部</a></div>
+        <div class="footer">
+            <p><a href="##" style="color: #ff4e49">手机APP下载</a> <a href="index.htm" tppabs="##" style="color:#bebebe;">慢慢买手机版
+                    -- 掌上比价平台</a></p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <script type="text/html" id="querybrandTpl">
+        {{each result value}}
+        <li class="mui-table-view-cell mui-collapse content-li">
+                <a class="mui-navigate-right brandTitle" href="#" data-brandTitleId='{{value.brandTitleId}}'>{{value.brandTitle}}</a>
+                <div class="mui-collapse-content">
+                </div>
+        </li>
+        {{/each}}
+    </script>
+    <script type="text/html" id="brandTitleTpl">
+        {{each result value index}}
+        <p>
+            <a href="brandlist.html?brandtitleid={{value.brandTitleId}}">
+                {{if index+1==1}}
+                <i class='red'>{{index+1}}</i><span class='brand-title'>{{value.brandName}}</span>
+                
+                {{else if index+1==2}}
+                <i class='orange'>{{index+1}}</i><span class='brand-title'>{{value.brandName}}</span>
+                
+                {{else if index+1==3}}
+                <i class='green'>{{index+1}}</i><span class='brand-title'>{{value.brandName}}</span>
+                {{else}}
+                <i>{{index+1}}</i><span class='brand-title'>{{value.brandName}}</span>
+                {{/if}}
+                <span class='brand-sales'>{{value.brandInfo}}</span>
+            </a>
+        </p>
+        {{/each}}
+    </script>
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="./lib/mui/js/mui.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/brandtitle.js"></script>
+</body>
+
+</html>
